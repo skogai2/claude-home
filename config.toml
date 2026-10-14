@@ -4,3 +4,19 @@ claude = "latest"
 fnox = { version = "latest", workflow = "release.yml" }
 gh = "latest"
 herdr = "latest"
+
+# Machine age key for fnox: created on this machine, never copied or
+# committed. The public key goes into the recipients of the
+# claude-and-skogix provider (see skogai/secrets.md in ~skogix/.config/skogai).
+# Runs on every `mise bootstrap`, so it only creates the key if missing.
+[tasks.bootstrap]
+run = '''
+set -eu
+install -d -m 0700 "$HOME/.ssh"
+key="$HOME/.ssh/local-per-machine-age.txt"
+if [ ! -e "$key" ]; then
+  (umask 077 && age-keygen -o "$key")
+fi
+chmod 0600 "$key"
+echo "claude machine age recipient: $(age-keygen -y "$key")"
+'''
