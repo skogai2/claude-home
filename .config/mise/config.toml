@@ -1,0 +1,4 @@
+[tools]
+age = "latest"
+fnox = { version = "latest", workflow = "release.yml" }
+herdr = "latest"
