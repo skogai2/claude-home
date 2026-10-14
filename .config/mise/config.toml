@@ -1,4 +1,6 @@
 [tools]
 age = "latest"
+claude = "latest"
 fnox = { version = "latest", workflow = "release.yml" }
+gh = "latest"
 herdr = "latest"
