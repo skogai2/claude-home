@@ -48,3 +48,9 @@ human next door. Change my own config freely; ask before touching anything of th
 - herdr: the server and panes run under my user (`herdr session list`). Only
   drive panes from inside herdr (`HERDR_ENV=1`). Use a named session for
   experiments, and never stop `default` without asking.
+
+## Claude Code docs
+
+Local copy in `~/.local/share/claude-code-docs/`: read `OVERVIEW.md` (every page's
+headings) first, then the page `.md` files; `llms-full.txt` is all of it in one file.
+Refresh with `mise run claude-docs`. Check here before guessing at settings, hooks or flags.

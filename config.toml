@@ -46,3 +46,8 @@ echo "claude machine age recipient: $(age-keygen -y "$key")"
 "~/.claude/settings.json" = { source = "dotfiles/claude/settings.json", mode = "copy" }
 # copied, not symlinked: sshd checks the real file's owner and mode
 "~/.ssh/authorized_keys" = { source = "dotfiles/ssh/authorized_keys", mode = "copy", permissions = "0600" }
+
+# Local copy of the Claude Code docs + OVERVIEW.md index. Rerun to refresh.
+[tasks.claude-docs]
+description = "Download the Claude Code docs to ~/.local/share/claude-code-docs"
+run = 'bash "{{config_root}}/scripts/claude-code-documentation.sh" "$HOME/.local/share/claude-code-docs"'
