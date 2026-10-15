@@ -5,6 +5,10 @@ fnox = { version = "latest", workflow = "release.yml" }
 gh = "latest"
 herdr = "latest"
 
+[env]
+# Machine age key created by the bootstrap task below; fnox reads it to decrypt
+FNOX_AGE_KEY_FILE = "{{env.HOME}}/.ssh/local-per-machine-age.txt"
+
 # Machine age key for fnox: created on this machine, never copied or
 # committed. The public key goes into the recipients of the
 # claude-and-skogix provider (see skogai/secrets.md in ~skogix/.config/skogai).
