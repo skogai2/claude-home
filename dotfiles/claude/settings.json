@@ -1,4 +1,27 @@
 {
+  "syncClaudeAiSkills": false,
+  "env": {
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
+    "CLAUDE_CODE_DISABLE_POLICY_SKILLS": "1",
+    "CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(gita *)",
+      "Bash(git *)",
+      "Bash(okn *)",
+      "Bash(herdr *)",
+      "Bash(wt *)"
+    ],
+    "defaultMode": "auto"
+  },
+  "outputStyle": "Concise",
+  "timeFormat": "24-hour",
+  "editorMode": "vim",
+  "remoteControlAtStartup": true,
+  "crossSessionInbound": "accept",
+  "feedbackDrafts": "off",
+  "dialogExpiry": "never",
   "theme": "dark",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
