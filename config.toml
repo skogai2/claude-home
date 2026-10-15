@@ -5,6 +5,10 @@ fnox = { version = "latest", workflow = "release.yml" }
 gh = "latest"
 herdr = "latest"
 
+[settings]
+# mise secrets (fnox) and task secrets
+experimental = true
+
 [env]
 # Machine age key created by the bootstrap task below; fnox reads it to decrypt
 FNOX_AGE_KEY_FILE = "{{env.HOME}}/.ssh/local-per-machine-age.txt"
