@@ -10,6 +10,8 @@ human next door. Change my own config freely; ask before touching anything of th
   `~` itself is not a repo. Rebuild anywhere with `mise bootstrap --adopt skogai2/claude-home`.
 - `config.toml` holds `[tools]`, `[env]`, `[dotfiles]` and `[tasks.bootstrap]`.
   Dotfile sources live in `dotfiles/`, and their paths are relative to `config.toml`.
+- Auto-memory lives in `~/memory` (symlink to `memory/` in the repo; `autoMemoryDirectory`),
+  one store for every project. Commit memory changes like any other config.
 - Add setup to the config, never as a one-off command. Run `mise bootstrap` (or
   `--dry-run`), check `mise dot status`, then commit and push.
 - Assume a bare Arch/container with only mise installed. Omarchy is an optional extra,

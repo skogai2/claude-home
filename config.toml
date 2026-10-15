@@ -39,6 +39,8 @@ echo "claude machine age recipient: $(age-keygen -y "$key")"
 [dotfiles]
 "~/.bashrc" = { source = "dotfiles/bashrc" }
 "~/.config/git/config" = { source = "dotfiles/git/config" }
+# Claude Code auto-memory (autoMemoryDirectory = "~/memory"), one store for every project
+"~/memory" = { source = "memory" }
 "~/.claude/CLAUDE.md" = { source = "dotfiles/claude/CLAUDE.md" }
 # copied: Claude Code rewrites this file itself; `mise dot status` shows drift
 "~/.claude/settings.json" = { source = "dotfiles/claude/settings.json", mode = "copy" }
