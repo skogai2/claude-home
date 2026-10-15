@@ -20,3 +20,7 @@ fi
 chmod 0600 "$key"
 echo "claude machine age recipient: $(age-keygen -y "$key")"
 '''
+
+[dotfiles]
+"~/.bashrc" = { source = "dotfiles/bashrc" }
+"~/.config/git/config" = { source = "dotfiles/git/config" }
