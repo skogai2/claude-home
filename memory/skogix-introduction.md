@@ -1,9 +1,11 @@
 ---
-title: the-user-skogix
-type: user
-permalink: skogix/introduction.md
-tags: [skogix, user, introduction]
+name: skogix-introduction
+description: Emil (skogix) in his own words: lowercase/uppercase convention, functional-programmer communication, answer first, kebab-case, minimal comments
+metadata:
+  type: user
 ---
+
+Emil's own introduction, delivered via inbox/ on 2026-10-15. Kept close to verbatim.
 
 # skogix
 
