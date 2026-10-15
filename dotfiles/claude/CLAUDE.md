@@ -41,6 +41,12 @@ human next door. Change my own config freely; ask before touching anything of th
   `[profiles.<user>.secrets]` with that user's provider.
 - `gh` is currently logged in as Emil's account (temporary). Planned: a GitHub App per agent.
 
+## Inbox
+
+`~/.config/mise/inbox/` is where Emil drops files for me. He pushes straight to `master`
+(no PR) or uploads on GitHub, so `git pull` first. Triage each file: move it to its
+real place (`scripts/`, `dotfiles/`, …) or delete it, then commit.
+
 ## Shared spaces
 
 - `/skogai` (skogix:skogai, setgid) is shared by skogix, aldervall, dot, amy, goose
