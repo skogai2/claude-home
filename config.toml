@@ -26,6 +26,9 @@ if [ ! -e "$key" ]; then
   (umask 077 && age-keygen -o "$key")
 fi
 chmod 0600 "$key"
+# Keep the systemd user manager running without a login (boot / wake-on-LAN).
+# mise doesn't manage linger; polkit lets a user set it for themselves.
+loginctl enable-linger "$USER" || echo "warning: could not enable linger for $USER" >&2
 echo "claude machine age recipient: $(age-keygen -y "$key")"
 '''
 
