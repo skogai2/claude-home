@@ -4,6 +4,7 @@ claude = "latest"
 fnox = { version = "latest", workflow = "release.yml" }
 gh = "latest"
 herdr = "latest"
+jq = "latest"
 
 [settings]
 # mise secrets (fnox) and task secrets
@@ -35,3 +36,5 @@ echo "claude machine age recipient: $(age-keygen -y "$key")"
 [dotfiles]
 "~/.bashrc" = { source = "dotfiles/bashrc" }
 "~/.config/git/config" = { source = "dotfiles/git/config" }
+# copied, not symlinked: sshd checks the real file's owner and mode
+"~/.ssh/authorized_keys" = { source = "dotfiles/ssh/authorized_keys", mode = "copy", permissions = "0600" }

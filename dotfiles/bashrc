@@ -1,14 +1,22 @@
-# Omarchy environment (OMARCHY_PATH + PATH), needed even for non-interactive shells
+# Owned by ~/.config/mise (dotfiles/bashrc). Must work on a bare container
+# with only mise installed; Omarchy is an optional extra on top.
+
+# mise shims for every shell, including non-interactive ones (ssh cmd, bash -c, units)
+case ":$PATH:" in
+  *":$HOME/.local/share/mise/shims:"*) ;;
+  *) PATH="$HOME/.local/share/mise/shims${PATH:+:$PATH}" ;;
+esac
+export PATH
+
+# Omarchy environment (OMARCHY_PATH + PATH), when present
 [[ -r /usr/share/omarchy/default/bash/env-bootstrap ]] && source /usr/share/omarchy/default/bash/env-bootstrap
 
-# If not running interactively, don't do anything else (leave this above the rc source)
+# If not running interactively, don't do anything else
 [[ $- != *i* ]] && return
 
-# All the default Omarchy aliases and functions
-# (don't mess with these directly, just overwrite them here!)
-source "$OMARCHY_PATH/default/bash/rc"
-
-# Add your own exports, aliases, and functions here.
-#
-# Make an alias for invoking commands you use constantly
-# alias p='python'
+# Omarchy aliases and functions, when present (they also activate mise)
+if [[ -n ${OMARCHY_PATH:-} && -r $OMARCHY_PATH/default/bash/rc ]]; then
+  source "$OMARCHY_PATH/default/bash/rc"
+elif command -v mise &>/dev/null; then
+  eval "$(mise activate bash)"
+fi

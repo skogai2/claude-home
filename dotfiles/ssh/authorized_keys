@@ -1,0 +1,1 @@
+from="127.0.0.1,::1" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFZnK/rYx/xGbqC2v8ErYSvv1PdraSSzkuBw0moyUX2S skogix->claude test skogix-workstation
