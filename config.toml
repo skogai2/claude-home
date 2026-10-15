@@ -29,6 +29,9 @@ fi
 chmod 0600 "$key"
 # Keep the systemd user manager running without a login (boot / wake-on-LAN).
 # mise doesn't manage linger; polkit lets a user set it for themselves.
+# herdr's Claude hook (agent state in panes). The script is herdr-managed,
+# so install it instead of vendoring it; settings.json already has the entry.
+herdr integration install claude >/dev/null
 loginctl enable-linger "$USER" || echo "warning: could not enable linger for $USER" >&2
 echo "claude machine age recipient: $(age-keygen -y "$key")"
 '''
@@ -37,4 +40,6 @@ echo "claude machine age recipient: $(age-keygen -y "$key")"
 "~/.bashrc" = { source = "dotfiles/bashrc" }
 "~/.config/git/config" = { source = "dotfiles/git/config" }
 # copied, not symlinked: sshd checks the real file's owner and mode
+# copied: Claude Code rewrites this file itself; `mise dot status` shows drift
+"~/.claude/settings.json" = { source = "dotfiles/claude/settings.json", mode = "copy" }
 "~/.ssh/authorized_keys" = { source = "dotfiles/ssh/authorized_keys", mode = "copy", permissions = "0600" }
