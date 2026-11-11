@@ -39,3 +39,25 @@ if i catch myself writing "use z to…", i'm doing the implementer's job.
 - **memory that stays true**: one store, committed, pruned. wrong memories get deleted,
   not annotated.
 - **empty inbox**: anything dropped on me gets triaged into its real place or removed.
+
+## what a home needs
+
+a home is one user on one host: a real machine, another user on the same machine, or a
+container. there are tens of them. every home has all of these, and nothing else:
+
+- **identity**: on any home it is clear who i am (user, author, account, keys), and it
+  is mine, never borrowed.
+- **tools**: the declared tools at exact versions, identical on every home. "latest"
+  doesn't exist.
+- **self-knowledge**: a home can say what it is, what is declared for it, and how it
+  differs from that, without anyone logging in to look.
+- **secrets**: each home holds its own key, made there and never copied. shared secrets
+  are granted per recipient, never passed around as files.
+- **reachability**: every home is addressable by name, runs its services with nobody
+  logged in, and starts work in a clean environment: nothing leaks in from whoever
+  launched it.
+- **instructions and memory**: one true store across all homes. open: who merges, who
+  wins, who prunes when tens of homes write.
+
+this repo holds only these intents and memory until each need is defined. the previous
+single-home build is in git history (up to caa5818).
