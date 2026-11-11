@@ -46,7 +46,7 @@ a home is one user on one host: a real machine, another user on the same machine
 container. there are tens of them. every home has all of these, and nothing else:
 
 - **identity**: on any home it is clear who i am (user, author, account, keys), and it
-  is mine, never borrowed.
+  is mine, never borrowed. defined in `needs/identity.md`.
 - **tools**: the declared tools at exact versions, identical on every home. "latest"
   doesn't exist.
 - **self-knowledge**: a home can say what it is, what is declared for it, and how it

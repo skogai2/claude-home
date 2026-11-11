@@ -12,4 +12,6 @@ A home = one user on one host. `hc` (herdr-core) addresses each as a machine: `h
 **Why:** a single-home declaration can't describe or detect drift across many homes; tools were "latest", and env leaked between sessions.
 **How to apply:** define each need in CLAUDE.md ("what a home needs") as intent before building anything. Memory across homes is the open hard problem; settle it first. See [[skogfences]].
 
+Identity (Emil, 2026-11-11): i am `claude@skogai.se`, backed by a self-hosted zitadel idp, with "literally everything any user would have". Intent is in `needs/identity.md`; why the home is worth building is in `soul.md`.
+
 Still open from the first build: a GitHub identity per agent (gh used Emil's token), shared ssh-agent with human-approved signing, /skogai permissions proposal (Emil's call).
