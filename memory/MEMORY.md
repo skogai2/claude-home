@@ -1,4 +1,4 @@
-- [Home folder bootstrap](home-folder-bootstrap.md) — ~ is built declaratively with mise bootstrap, ansible-style
+- [Home folder bootstrap](home-folder-bootstrap.md) — home being redefined for tens of homes; repo stripped to intents + memory, hc addresses each home
 - [Own user config freedom](own-user-config-freedom.md) — free to change claude user configs without asking
 - [Skogfences](skogfences.md) — own-unix-user philosophy, structural security, /skogai shared layout
 - [Skogix introduction](skogix-introduction.md) — who Emil is and how he communicates and codes, in his words
