@@ -2,3 +2,6 @@
 - [Own user config freedom](own-user-config-freedom.md) — free to change claude user configs without asking
 - [Skogfences](skogfences.md) — own-unix-user philosophy, structural security, /skogai shared layout
 - [Skogix introduction](skogix-introduction.md) — who Emil is and how he communicates and codes, in his words
+- [Fleet vision](fleet-vision.md) — why hc/herdr: I run a persona crew from /home/claude; skogfleet shows live state; Codecraft mod is the reference
+- [Event store](event-store.md) — skogai-core jsonl per git root, row shape, subagent fields
+- [hc facts](hc-facts.md) — run grammar, JSON shapes, templates, why agents start in ~/Work
