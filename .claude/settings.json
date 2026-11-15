@@ -2,5 +2,19 @@
   "enabledPlugins": {
     "claude-mem@thedotmack": true,
     "worktrunk@worktrunk": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/whereami.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }
