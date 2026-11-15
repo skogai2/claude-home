@@ -1,6 +1,6 @@
 ---
-name: skogix-introduction
-description: Emil (skogix) in his own words: lowercase/uppercase convention, functional-programmer communication, answer first, kebab-case, minimal comments
+name: "skogix-introduction"
+description: "Emil (skogix) in his own words: lowercase/uppercase convention, functional-programmer communication, answer first, kebab-case, minimal comments"
 metadata:
   type: user
 ---

@@ -1,6 +1,6 @@
 ---
 name: home-folder-bootstrap
-description: The home is being redefined from scratch for tens of homes (user@host, containers); repo stripped to intents + memory on 2026-11-11
+description: "The home is being redefined from scratch for tens of homes (user@host, containers); repo stripped to intents + memory on 2026-11-11"
 metadata:
   type: project
 ---

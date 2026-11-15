@@ -1,6 +1,6 @@
 ---
 name: skogfences
-description: Emil's "skogfences" philosophy: agents get their own unix user and home, security is structural (chmod) not behavioral; plus the /skogai layout
+description: "Emil's `skogfences` philosophy: agents get their own unix user and home, security is structural (chmod) not behavioral; plus the /skogai layout"
 metadata:
   type: user
 ---
