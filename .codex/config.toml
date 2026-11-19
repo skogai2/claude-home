@@ -1,0 +1,14 @@
+[mcp_servers.atuin]
+command = "atuin"
+args = ["mcp"]
+
+[mcp_servers.mise]
+command = "mise"
+args = [
+    "--cd",
+    "/home/skogix/.config/skogai",
+    "mcp",
+]
+
+[mcp_servers.skogmail]
+command = "/home/skogix/.local/src/cloudflare/workers/aliasflare/bin/aliasflare-mcp.js"

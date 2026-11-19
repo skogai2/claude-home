@@ -1,0 +1,2 @@
+[tasks]
+init = { run = ".skogai/messages/inbox/whereami.sh" }
